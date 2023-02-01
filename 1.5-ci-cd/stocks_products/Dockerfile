@@ -13,9 +13,6 @@ RUN pip install --upgrade pip
 COPY ./requirements.txt /stock_app/requirements.txt
 RUN pip install -r requirements.txt
 
-EXPOSE 8000
-
-# copy entrypoint.sh
 COPY ./entrypoint.sh .
 RUN sed -i 's/\r$//g' /stock_app/entrypoint.sh
 RUN chmod +x /stock_app/entrypoint.sh
