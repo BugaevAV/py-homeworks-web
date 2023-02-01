@@ -43,7 +43,7 @@ jobs:
         with:
           python-version: 3.9
       - name: Установка зависимостей
-        run: pip install -r ~/py-homeworks-web/1.5-ci-cd/stocks_products/requirements.txt
+        run: pip install -r /1.5-ci-cd/stocks_products/requirements.txt
 
       - name: Линтинг
         run: flake8 logistic/ --exclude logistic/migrations/
