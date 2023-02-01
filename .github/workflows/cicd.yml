@@ -8,16 +8,16 @@ jobs:
   tests:
     runs-on: ubuntu-20.04
     env:
-      ALLOWED_HOSTS: ${{ secret.ALLOWED_HOSTS }}
-      SECRET_KEY: ${{ secret.SECRET_KEY }}   
+      ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}   
       DEGUG: "0"
-      DATABASE: ${{ secret.DATABASE }}
-      DB_ENGINE: ${{ secret.SQL_ENGINE }}
-      DB_USER: ${{ secret.SQL_USER }}
-      DB_PASSWORD: ${{ secret.SQL_PASSWORD }}
-      DB_NAME: ${{ secret.SQL_DATABASE }}
-      DB_HOST: ${{ secret.SQL_HOST }}
-      DB_PORT: ${{ secret.SQL_PORT }}
+      DATABASE: ${{ secrets.DATABASE }}
+      DB_ENGINE: ${{ secrets.SQL_ENGINE }}
+      DB_USER: ${{ secrets.SQL_USER }}
+      DB_PASSWORD: ${{ secrets.SQL_PASSWORD }}
+      DB_NAME: ${{ secrets.SQL_DATABASE }}
+      DB_HOST: ${{ secrets.SQL_HOST }}
+      DB_PORT: ${{ secrets.SQL_PORT }}
      
     services:
       postgres_main:
