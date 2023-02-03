@@ -1,0 +1,6 @@
+#!/bin/bash/expect -f
+spawn /home/alexb/py-homeworks-web/pull.sh
+expect "password"
+send -- "ytrewq"
+expect eof
+
