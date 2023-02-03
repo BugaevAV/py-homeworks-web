@@ -69,7 +69,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           script:
-            - cd /home/alexb/py-homeworks-web/1.5-ci-cd
+            - cd /home/alexb/py-homeworks-web
             - git pull origin workflow
             - sudo docker-compose down -v
             - sudo docker-compose up --build
