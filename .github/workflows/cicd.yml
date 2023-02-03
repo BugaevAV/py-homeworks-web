@@ -68,9 +68,5 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          script:
-            - cd /home/alexb/py-homeworks-web
-            - git pull origin workflow
-            - sudo docker-compose down -v
-            - sudo docker-compose up --build
-            - sudo docker-compose exec stock_app python manage.py collectstatic
+          script: expect /home/alexb/py-homeworks-web/pull.exp
+
