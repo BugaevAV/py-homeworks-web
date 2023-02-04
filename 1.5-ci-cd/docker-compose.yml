@@ -2,7 +2,9 @@ version: '3.9'
 
 services:
   stock_app:
-    build: ./stocks_products
+    build:
+      context: ./stocks_products
+      dockerfile: Dockerfile
     command: gunicorn stocks_products.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/stock_app/staticfiles/
