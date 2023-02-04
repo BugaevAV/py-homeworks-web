@@ -68,4 +68,4 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          script: expect /home/alexb/py-homeworks-web/pull.ex
+          script: expect /home/alexb/py-homeworks-web/pull.exp
