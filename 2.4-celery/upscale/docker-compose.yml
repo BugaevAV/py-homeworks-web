@@ -36,7 +36,7 @@ services:
       BROKER: ${BROKER}
     ports:
       - "5000:5000"
-    entrypoint: python upscale.py
+    entrypoint: bash runDocker.sh
     depends_on:
       - redis
     networks:
